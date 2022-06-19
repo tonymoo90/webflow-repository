@@ -1,9 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script>
 const yesWagers = []
 const noWagers = []
 fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula=NOT({Member ID}!='+JSON.stringify(JSON.parse(localStorage.getItem('memberstack')).information.id)+')', {
@@ -106,8 +100,8 @@ $(".button-3, .button-5").click(function() {
     togglePopup(false)
   }
 })
-</script>
-<script>
+
+
   function timePast(curr, prev) {
     var msMin = 60 * 1000;
     var msHr = msMin * 60;
@@ -164,8 +158,8 @@ $(".button-3, .button-5").click(function() {
     var parsedTime = Date.parse($(this).text());
     $(this).text(timePast(now, new Date(parsedTime)));
   });
-</script>
-<script>
+
+
     $('.card-back-latest').each(function (index) {
       rando = Math.random()
          $(this).children().each(function(index) {
@@ -196,8 +190,8 @@ $(".button-3, .button-5").click(function() {
             }
          })
     });
-</script>
-<script>
+
+
 $("canvas").each(function (index) {
   let idName = `chart1${index}`;
   $(this).attr("id", idName);
@@ -225,8 +219,8 @@ for(i = 0; i < data.length; i ++) {
       }
   });
 });
-</script>
-<script>
+
+
 $("canvas1").each(function (index) {
   let idName = `chart2${index}`;
   $(this).attr("id", idName);
@@ -248,8 +242,8 @@ console.log(wrong)
     },
   });
   });
-</script>
-<script>
+
+
  $(document).ready( function(){
   $(".pointscount-adder .add-action").click( function(){
     if( $(this).hasClass('yes') ) {  
@@ -261,10 +255,8 @@ console.log(wrong)
     }
   } );
     });
-</script>
-<script>
    function change(value){
    document.getElementById("count").value= 1*value;
    document.getElementById("totalValue").innerHTML= 20*value;
      }
- </script>
+ 
