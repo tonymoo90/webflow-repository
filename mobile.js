@@ -288,5 +288,4 @@ console.log(wrong)
         $("input",'.pointscount').val( parseInt($("[name=quantity]",'.pointscount').val()) - 1 );
       }
     }
-  } );
-    });
+  } ); });

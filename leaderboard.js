@@ -11,12 +11,12 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Leadersboard', {
 
         sorted.forEach((record, i ) => { 
 
-            let row = document.createElement("div")
-            row.setAttribute("class", "table-row")
-            list.appendChild(row)
+        let row = document.createElement("div")
+        row.setAttribute("class", "table-row")
+        list.appendChild(row)
 
-            let rowDivBlock = document.createElement("div");
-            rowDivBlock.setAttribute("class", "div-block-406 _2");
+        let rowDivBlock = document.createElement("div");
+        rowDivBlock.setAttribute("class", "div-block-406 _2");
         row.appendChild(rowDivBlock);
 
         let rowNr = document.createElement("div")
