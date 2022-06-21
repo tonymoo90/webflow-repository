@@ -132,10 +132,8 @@ $(".trigger").each(function (index) {
     duration: 0.3
   });
 });
-</script>
 
 
-<script>
 
 $("canvas").each(function (index) {
  
@@ -176,9 +174,6 @@ for(i = 0; i < data.length; i ++) {
 			}
   });
 });
-</script>
-
-<script>
 // Loop through every canvas on the page
 $("canvas1").each(function (index) {
   // Set id name
@@ -210,9 +205,6 @@ console.log(wrong)
 	});
   });
  
-</script>
-
-<script>
  $(document).ready( function(){
 	$(".pointscount-adder .add-action").click( function(){
 		if( $(this).hasClass('yes') ) {  
@@ -225,9 +217,7 @@ console.log(wrong)
 	} );
     
     });
-  
-</script>
-<script>
+
   function timePast(curr, prev) {
     //define the milliseconds in every time unit
     var msMin = 60 * 1000;
@@ -289,9 +279,6 @@ console.log(wrong)
     var parsedTime = Date.parse($(this).text());
     $(this).text(timePast(now, new Date(parsedTime)));
   });
-
-</script>
-<script>
  $(document).ready( function(){
   $(".pointscount-adder .add-action").click( function(){
     if( $(this).hasClass('yes') ) {  
