@@ -53,7 +53,7 @@ $(".button-3, .button-5").click(function() {
     article_id = $(this).text()
     choice = true ? $(this).hasClass("button-3") : false
     value = -Math.abs($('.idtext[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text())
-  if (JSON.parse($( '.idtext[data-bind='+ JSON.stringify( $(this)[0].dataset.bind ) + ']').text()) <= JSON.parse(document.getElementById("txtNumber").value)) {
+  if (JSON.parse($('.idtext[data-bind='+ JSON.stringify( $(this)[0].dataset.bind ) + ']').text()) <= JSON.parse(document.getElementById("txtNumber").value)) {
      togglePopup(true)
     if ($(this).hasClass("button-3")) {
         $('.wager_button').addClass("confirm_button_yes")
