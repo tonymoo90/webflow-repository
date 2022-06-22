@@ -52,8 +52,8 @@ $('.popup-close-btn_3').click(function() { wagerAlreadyPlaced()})
 $(".button-3, .button-5").click(function() {
     article_id = $(this).text()
     choice = true ? $(this).hasClass("button-3") : false
-    value = -Math.abs($('.text-block-80[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text())
-  if (JSON.parse($('.text-block-80[data-bind='+ JSON.stringify( $(this)[0].dataset.bind ) + ']').text()) <= JSON.parse(document.getElementById("txtNumber").value)) {
+    value = -Math.abs($('.idtext[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text())
+  if (JSON.parse($('.idtext[data-bind='+ JSON.stringify( $(this)[0].dataset.bind ) + ']').text()) <= JSON.parse(document.getElementById("txtNumber").value)) {
      togglePopup(true)
     if ($(this).hasClass("button-3")) {
         $('.wager_button').addClass("confirm_button_yes")
@@ -163,7 +163,7 @@ $(".button-3, .button-5").click(function() {
     $('.card-back-latest').each(function (index) {
       rando = Math.random()
          $(this).children().each(function(index) {
-            if ($(this).hasClass("text-block-80")) {
+            if ($(this).hasClass("text-block-80 idtext")) {
                $(this).attr("data-bind", rando)
             }
             if ($(this).hasClass("jetboost-toggle-favorite-kvbw")) {
