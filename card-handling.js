@@ -121,7 +121,7 @@ $('.card-back-latest').each(function (index) {
                 }
              })
           }
-          if ($(this).hasClass("jetboost-toggle-sR-k6rr")) {
+          if ($(this).hasClass("jetboost-toggle-favorite-k6rr")) {
              $(this).children().each(function(index) {
                 if ($(this).hasClass("item-is-not-favorite2")) {
                    $(this).children().each(function(index) {
