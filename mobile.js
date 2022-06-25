@@ -36,8 +36,8 @@ $(".trigger:nth-child(odd)").each(function (index) {
     scaleY: 1
   });
   tl.to(myImage, {
-    x: "-20em",
-    y: "-24em",
+    // x: "-20em",
+    // y: "-24em",
     rotation: -20,
     opacity: 0,
     duration: 0.3
