@@ -39,11 +39,11 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
 function togglePopup(valid) {
     if (!valid) {
        document.getElementById("popup-1").classList.toggle("active");
-       document.body.classList.toggle("disabled")
+       document.body.style.overflow = "hidden";
     } else {
       document.getElementById("popup-2").classList.toggle("active");
-      document.body.classList.toggle("disabled")
-    }
+      document.body.style.overflow = "hidden";
+   }
 }
 function wagerAlreadyPlaced() {
       document.getElementById("popup-3").classList.toggle("active");
