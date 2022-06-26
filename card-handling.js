@@ -42,7 +42,7 @@ function togglePopup(valid) {
        document.body.style.overflow = "hidden";
     } else {
       document.getElementById("popup-2").classList.toggle("active");
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "scroll";
    }
 }
 function wagerAlreadyPlaced() {
