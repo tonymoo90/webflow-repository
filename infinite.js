@@ -34,7 +34,8 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
       })
       $('.wager-countdown').each(function(index) { 
         if  ($(this).text() === "CLOSED" ) {
-
+          $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', styles)
+          $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', styles)
         } 
       })
 
@@ -197,11 +198,21 @@ $(".button-3, .button-5").click(function() {
             }
           })
       }
-      if ($(this).hasClass("wager-countdown")) {
-        $(this).attr("data-bind", rando)
-      }
+      if ($(this).hasClass("div-block-419")) {
+        $(this).children().each(function(index) {
+          if ($(this).hasClass("html-embed-28 w-embed w-script")) {
+            $(this).children().each(function(index) {
+              if ($(this).hasClass("wager-countdown")) {
+                  $(this).attr("data-bind", rando)
+              }    
+            })
+          }
+        })
+      }  
     })
   });
+
+ 
 
 
 $("canvas").each(function (index) {
