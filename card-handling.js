@@ -32,6 +32,13 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
               $(this).parent().attr('style', cursor)
             }  
       })
+      $('.wager-countdown').each(function(index) { 
+         if  ($(this).text() === "CLOSED" ) {
+           $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', "display: none;")
+           $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').next().attr('style', "display: none;")
+           $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', "display: none;")
+           $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').next().attr('style', "display: none;")
+         } 
 })
 .catch((error) => {
   console.error('Error:', error);
@@ -134,6 +141,14 @@ $('.card-back-latest').each(function (index) {
                 }
              })
           }
+          $('.wager-countdown').each(function(index) { 
+            if  ($(this).text() === "CLOSED" ) {
+              $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', "display: none;")
+              $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').next().attr('style', "display: none;")
+              $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', "display: none;")
+              $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').next().attr('style', "display: none;")
+            } 
+          })
        })
   });
 
