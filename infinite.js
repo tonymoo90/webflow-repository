@@ -34,8 +34,8 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
       })
       $('.wager-countdown').each(function(index) { 
         if  ($(this).text() === "CLOSED" ) {
-          $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', styles)
-          $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', styles)
+          $('.button-5[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', "display: none;")
+          $('.button-3[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').attr('style', "display: none;")
         } 
       })
 
