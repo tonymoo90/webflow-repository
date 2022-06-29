@@ -1,5 +1,5 @@
 const yesWagers = []
-const noWagers = []
+const noWagers = [] 
 fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula=NOT({Member ID}!='+JSON.stringify(JSON.parse(localStorage.getItem('memberstack')).information.id)+')', {
   headers: {
     'Authorization': 'Bearer keyzsJA5PVzv64Oem'
@@ -32,10 +32,17 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
               $(this).parent().attr('style', cursor)
             }  
       })
+      $('.wager-countdown').each(function(index) { 
+        if  ($(this).text() === "CLOSED" ) {
+
+        } 
+      })
+
 })
 .catch((error) => {
   console.error('Error:', error);
 });
+
 function togglePopup(valid) {
     if (!valid) {
        document.getElementById("popup-1").classList.toggle("active");
@@ -43,9 +50,11 @@ function togglePopup(valid) {
       document.getElementById("popup-2").classList.toggle("active");
     }
 }
+
 function wagerAlreadyPlaced() {
       document.getElementById("popup-3").classList.toggle("active");
 }
+
 $('.popup-close-btn_1').click(function() { togglePopup(false); $('.confirm_button_yes, .confirm_button_no').unbind() })
 $('.popup-close-btn_2').click(function() { togglePopup(true); $('.confirm_button_yes, .confirm_button_no').unbind() })
 $('.popup-close-btn_3').click(function() { wagerAlreadyPlaced()})
@@ -160,36 +169,39 @@ $(".button-3, .button-5").click(function() {
   });
 
 
-    $('.card-back-latest').each(function (index) {
-      rando = Math.random()
-         $(this).children().each(function(index) {
-            if ($(this).hasClass("text-block-80 idtext")) {
-               $(this).attr("data-bind", rando)
-            }
-            if ($(this).hasClass("jetboost-toggle-favorite-kvbw")) {
-               $(this).children().each(function(index) {
-                  if ($(this).hasClass("item-is-not-favorite")) {
-                     $(this).children().each(function(index) {
-                        if ($(this).hasClass("button-3")) {
-                           $(this).attr("data-bind", rando)
-                        }
-                     })
+  $('.card-back-latest').each(function (index) {
+    rando = Math.random()
+    $(this).children().each(function(index) {
+      if ($(this).hasClass("text-block-80 idtext")) {
+          $(this).attr("data-bind", rando)
+      }
+      if ($(this).hasClass("jetboost-toggle-favorite-kvbw")) {
+          $(this).children().each(function(index) {
+            if ($(this).hasClass("item-is-not-favorite")) {
+                $(this).children().each(function(index) {
+                  if ($(this).hasClass("button-3")) {
+                      $(this).attr("data-bind", rando)
                   }
-               })
+                })
             }
-            if ($(this).hasClass("jetboost-toggle-favorite-k6rr")) {
-               $(this).children().each(function(index) {
-                  if ($(this).hasClass("item-is-not-favorite2")) {
-                     $(this).children().each(function(index) {
-                        if ($(this).hasClass("button-5")) {
-                           $(this).attr("data-bind", rando)
-                        }
-                     })
+          })
+      }
+      if ($(this).hasClass("jetboost-toggle-favorite-k6rr")) {
+          $(this).children().each(function(index) {
+            if ($(this).hasClass("item-is-not-favorite2")) {
+                $(this).children().each(function(index) {
+                  if ($(this).hasClass("button-5")) {
+                      $(this).attr("data-bind", rando)
                   }
-               })
+                })
             }
-         })
-    });
+          })
+      }
+      if ($(this).hasClass("wager-countdown")) {
+        $(this).attr("data-bind", rando)
+      }
+    })
+  });
 
 
 $("canvas").each(function (index) {
