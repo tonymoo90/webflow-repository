@@ -38,9 +38,10 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
 						$('.button-3[data-bind=' + JSON.stringify($(this)[0].dataset.bind) + ']').next().attr('style', "display: none;")
 					}
 				})
-				.catch((error) => {
-					console.error('Error:', error);
-				});
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
 
 			function togglePopup(valid) {
 				if (!valid) {
@@ -120,7 +121,6 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
 					togglePopup(false)
 				}
 			})
-    })
 
 			//
 
