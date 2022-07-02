@@ -71,11 +71,12 @@ $(".trigger:nth-child(even)").each(function (index) {
     scaleY: 1
   });
   tl.to(myImage, {
-    // x: "20em",
-    // y: "-24em",
+    x: "20em",
+    y: "-24em",
     rotation: 20,
     opacity: 0,
-    duration: 0.3
+    duration: 0.3,
+    display
   });
 });
 
@@ -119,6 +120,7 @@ $(".trigger").each(function (index) {
       toggleClass: { targets: myItem, className: "active" },
       onEnter: () => $(".sticky-section").css("background-color", myColor),
       onEnterBack: () => $(".sticky-section").css("background-color", myColor),
+      onLeave: () => $(".sticky-section").css("display", "none"),
       scrub: 1
     }
   });
