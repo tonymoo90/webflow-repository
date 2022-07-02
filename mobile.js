@@ -119,8 +119,7 @@ $(".trigger").each(function (index) {
       end: "bottom 30%",
       toggleClass: { targets: myItem, className: "active" },
       onEnter: () => $(".sticky-section").css("background-color", myColor),
-      onEnterBack: () => $(".sticky-section").css("background-color", myColor),
-      onLeave: () => $(".sticky-section").css("display", "none"),
+      onEnterBack: () => $(".sticky-section").css("background-color", myColor) ,     
       scrub: 1
     }
   });
