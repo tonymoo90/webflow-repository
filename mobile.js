@@ -75,8 +75,7 @@ $(".trigger:nth-child(even)").each(function (index) {
     y: "-24em",
     rotation: 20,
     opacity: 0,
-    duration: 0.3,
-    display
+    duration: 0.3
   });
 });
 
