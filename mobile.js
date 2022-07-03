@@ -27,7 +27,7 @@ $(".trigger:nth-child(odd)").each(function (index) {
     }
   });
   tl.to(myImage, {
-    x: "-500em",
+    x: "-1em",
     y: "-3em",
     rotation: -10,
     opacity: 1,
@@ -118,7 +118,7 @@ $(".trigger").each(function (index) {
       end: "bottom 30%",
       toggleClass: { targets: myItem, className: "active" },
       onEnter: () => $(".sticky-section").css("background-color", myColor),
-      onEnterBack: () => $(".sticky-section").css("background-color", myColor) ,     
+      onEnterBack: () => $(".sticky-section").css("background-color", myColor),
       scrub: 1
     }
   });
