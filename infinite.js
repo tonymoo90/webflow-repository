@@ -47,6 +47,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
 });
 
 function togglePopup(valid) {
+  var popupValue = ($('.idtext[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text()) 
     if (!valid) {
        document.getElementById("popup-1").classList.toggle("active");
     } else {
