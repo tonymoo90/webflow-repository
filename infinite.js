@@ -46,8 +46,8 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
   console.error('Error:', error);
 });
 
-function togglePopup(valid) {
-  var popupValue = ($('.idtext[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text()) 
+function togglePopup(valid, value) {
+   console.log(value)
     if (!valid) {
        document.getElementById("popup-1").classList.toggle("active");
     } else {
@@ -63,11 +63,11 @@ $('.popup-close-btn_1').click(function() { togglePopup(false); $('.confirm_butto
 $('.popup-close-btn_2').click(function() { togglePopup(true); $('.confirm_button_yes, .confirm_button_no').unbind() })
 $('.popup-close-btn_3').click(function() { wagerAlreadyPlaced()})
 $(".button-3, .button-5").click(function() {
-    article_id = $(this).text()
-    choice = true ? $(this).hasClass("button-3") : false
-    value = -Math.abs($('.idtext[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text())
+     article_id = $(this).text()
+     choice = true ? $(this).hasClass("button-3") : false
+     value = -Math.abs($('.idtext[data-bind='+ JSON.stringify($(this)[0].dataset.bind) + ']').text())
   if (JSON.parse($('.idtext[data-bind='+ JSON.stringify( $(this)[0].dataset.bind ) + ']').text()) <= JSON.parse(document.getElementById("txtNumber").value)) {
-     togglePopup(true)
+     togglePopup( true, value )
     if ($(this).hasClass("button-3")) {
         $('.wager_button').addClass("confirm_button_yes")
     }
