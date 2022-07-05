@@ -47,7 +47,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
 });
 
 function togglePopup(valid, value) {
-    document.getElementById('wager-value-confirm').innerHTML = `Total wager is ${value}`;
+    document.getElementById('wager-value-confirm').innerHTML = `Total wager is ${Math.abs(value)}`;
     if (!valid) {
        document.getElementById("popup-1").classList.toggle("active");
     } else {
