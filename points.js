@@ -1,3 +1,5 @@
+document.getElementsByClassName("wrapper-section wf-section")[0].style.display = "block"
+
 const list = document.getElementsByClassName("scroll-table-content")[0]
 fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula=NOT({Member ID}!='+JSON.stringify(JSON.parse(localStorage.getItem('memberstack')).information.id)+')', {
          headers: {Authorization: 'Bearer keyzsJA5PVzv64Oem'}
@@ -10,28 +12,29 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.setAttribute("class", "table-row")
             list.appendChild(row)
 
-            // let rowDivBlock = document.createElement("div");
-            // rowDivBlock.setAttribute("class", "div-block-406 _2");
-            // row.appendChild(rowDivBlock);
-
             let rowNr = document.createElement("div")
-            // rowNr.setAttribute("class", "table-row-nr")
-            // rowNr.innerHTML = "poop"
-            // rowDivBlock.appendChild(rowNr)
-
-            let tableBoxDate = document.createElement("div")
-            tableBoxDate.setAttribute("class", "table-box _2")
-            row.appendChild(tableBoxDate)
+      
+            let tableBoxName = document.createElement("div")
+            tableBoxName.setAttribute("class", "table-box _2")
+            row.appendChild(tableBoxName)
             let img = document.createElement("img")
             img.setAttribute("class", "image-35")
             img.setAttribute("width", "32")
             img.setAttribute("sizes", "32px")
             img.setAttribute("src", "https://via.placeholder.com/150")
-            let date = document.createElement("div")
-            date.setAttribute("class", "table-data name")
-            date.innerHTML = f.fields['Selection Date']
-            tableBoxDate.appendChild(img)
-            tableBoxDate.appendChild(date)
+            let name = document.createElement("div")
+            name.setAttribute("class", "table-data name")
+            name.innerHTML = f.fields['Selection Date']
+            tableBoxName.appendChild(img)
+            tableBoxName.appendChild(name)
+
+            let tableBoxQuestion = document.createElement("div")
+            tableBoxQuestion.setAttribute("class", "table-box _2")
+            row.appendChild(tableBoxQuestion)
+            let question = document.createElement("div")
+            question.setAttribute("class", "table-data")
+            question.innerHTML = "Will Tesla succeed?"
+            tableBoxQuestion.appendChild(question)
 
             let tableBoxBalance = document.createElement("div")
             tableBoxBalance.setAttribute("class", "table-box _2")
@@ -54,7 +57,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.appendChild(tableBoxDate)
             let date = document.createElement("div")
             date.setAttribute("class", "table-data")
-            date.innerHTML = f.fields['Date Joined']
+            date.innerHTML = 1000
             tableBoxDate.appendChild(date)    
         })
     })
