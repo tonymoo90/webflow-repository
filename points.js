@@ -48,7 +48,13 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.appendChild(tableBoxBalance)
             let balance = document.createElement("div")
             balance.setAttribute("class", "table-data")
-            balance.innerHTML = 'YES' ? f.fields.Choice : 'NO'
+
+            if (f.fields.choice && (f.fields.choice === true || f.fields.choice === "true") {
+              balance.innerHTML = 'YES' 
+            }
+            else {
+              balance.innerHTML = ' NO' 
+            }
             tableBoxBalance.appendChild(balance)
 
             let tableBoxPending = document.createElement("div")
@@ -56,7 +62,13 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.appendChild(tableBoxPending)
             let pending = document.createElement("div")
             pending.setAttribute("class", "table-data")
-            pending.innerHTML = '+' + f.fields.Value ? (f.fields.Value > 0) : f.fields.Value
+            
+            if (f.fields.Value > 0) {
+              pending.innerHTML = '+' + f.fields.Value 
+            }
+            else {
+              pending.innerHTML = f.fields.Value 
+            }
             tableBoxPending.appendChild(pending)
 
             let tableBoxDate = document.createElement("div")
