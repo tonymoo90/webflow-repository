@@ -49,11 +49,11 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             let balance = document.createElement("div")
             balance.setAttribute("class", "table-data")
 
-            if (f.fields['Closing Date (from Linked Betting Line ID'][0] && f.fields.Category === "winning")  {
+            if (f.fields['Closing Date (from Linked Betting Line ID'] && f.fields['Closing Date (from Linked Betting Line ID'][0] && f.fields.Category === "winning")  {
               tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background:#00b300;font-weight: bold;width: 5%; ')
             }
 
-            else if (f.fields['Closing Date (from Linked Betting Line ID'][0] && f.fields.Category !== "winning")  {
+            else if (f.fields['Closing Date (from Linked Betting Line ID'] && f.fields['Closing Date (from Linked Betting Line ID'][0] && f.fields.Category !== "winning")  {
               tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background:#FF0000;font-weight: bold;width: 5%; ')
             }
 
