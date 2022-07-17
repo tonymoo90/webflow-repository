@@ -50,9 +50,11 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             balance.setAttribute("class", "table-data")
 
             if (f.fields.choice && (f.fields.choice === true || f.fields.choice === "true")) {
+              tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background: #EBEBE4;font-weight: bold;')
               balance.innerHTML = 'YES' 
             }
             else {
+              tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background: #EBEBE4;font-weight: bold;')
               balance.innerHTML = ' NO' 
             }
             tableBoxBalance.appendChild(balance)
