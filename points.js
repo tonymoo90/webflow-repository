@@ -49,7 +49,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             let balance = document.createElement("div")
             balance.setAttribute("class", "table-data")
 
-            if (f.fields.choice && (f.fields.choice === true || f.fields.choice === "true") {
+            if (f.fields.choice && (f.fields.choice === true || f.fields.choice === "true")) {
               balance.innerHTML = 'YES' 
             }
             else {
