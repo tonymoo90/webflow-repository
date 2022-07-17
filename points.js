@@ -48,7 +48,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.appendChild(tableBoxBalance)
             let balance = document.createElement("div")
             balance.setAttribute("class", "table-data")
-            balance.innerHTML = f.fields.Choice
+            balance.innerHTML = 'YES' ? f.fields.Choice : 'NO'
             tableBoxBalance.appendChild(balance)
 
             let tableBoxPending = document.createElement("div")
@@ -56,7 +56,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.appendChild(tableBoxPending)
             let pending = document.createElement("div")
             pending.setAttribute("class", "table-data")
-            pending.innerHTML = f.fields.Value
+            pending.innerHTML = '+' + f.fields.Value ? (f.fields.Value > 0) : f.fields.Value
             tableBoxPending.appendChild(pending)
 
             let tableBoxDate = document.createElement("div")
