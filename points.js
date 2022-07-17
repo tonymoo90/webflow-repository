@@ -26,9 +26,10 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             name.setAttribute("class", "table-data name")
 
             //date handling
-            let betDate = new Date()
+            let betDate = new Date(f.fields['Selection Date'])
+            betDate.toISOString().split('T')[0]
             const offset = betDate.getTimezoneOffset()
-            betDate = new Date(f.fields['Selection Date'].getTime() - (offset*60*1000))
+            betDate = new Date(betDate.getTime() - (offset*60*1000))
                         
             name.innerHTML = betDate.toISOString().split('T')[0]
             tableBoxName.appendChild(img)
