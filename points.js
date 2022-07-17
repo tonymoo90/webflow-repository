@@ -40,7 +40,7 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             row.appendChild(tableBoxQuestion)
             let question = document.createElement("div")
             question.setAttribute("class", "table-data")
-            question.innerHTML = "Will Tesla succeed?"
+            question.innerHTML = f.fields['Question (from carddata)']
             tableBoxQuestion.appendChild(question)
 
             let tableBoxBalance = document.createElement("div")
@@ -49,15 +49,15 @@ fetch('https://api.airtable.com/v0/appzvtjAGocJzOExM/Member.Bets?filterByFormula
             let balance = document.createElement("div")
             balance.setAttribute("class", "table-data")
 
-            if (f.fields['Closing Date'] && f.fields.Category === "winning")  {
+            if (f.fields['Closing Date (from Linked Betting Line ID'] && f.fields.Category === "winning")  {
               tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background:#00b300;font-weight: bold;width: 5%; ')
             }
 
-            else if (f.fields['Closing Date'] && f.fields.Category !== "winning")  {
+            else if (f.fields['Closing Date (from Linked Betting Line ID'] && f.fields.Category !== "winning")  {
               tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background:#FF0000;font-weight: bold;width: 5%; ')
             }
 
-            else if (!f.fields['Closing Date']) {
+            else if (!f.fields['Closing Date (from Linked Betting Line ID']) {
               tableBoxBalance.setAttribute("style",'text-align: center;justify-content: center;align-items: center;background:#EBEBE4;font-weight: bold;width: 5%; ')
               
             }
